@@ -1,1 +1,7 @@
-<p>directives works!</p>
+<div>Built-in attribute directives</div>
+
+<div [ngClass]="isRedColor ? 'txt--red' : 'txt--green'">
+  This div's used ngClass
+</div>
+
+<div [ngClass]="userClass.fontBold">This div's used ngClass obj</div>
