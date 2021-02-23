@@ -1,0 +1,32 @@
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.logo {
+  max-width: 140px;
+}
+
+.mat-sidenav {
+  width: 250px;
+}
+
+.container {
+  padding: 10px;
+  height: 88vh;
+}
+.nav-right {
+  margin-left: auto;
+  list-style: none;
+  display: flex;
+  li {
+    margin-right: 10px;
+  }
+  a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+  }
+  .link--active {
+    font-weight: 500;
+    color: greenyellow;
+  }
+}

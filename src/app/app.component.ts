@@ -10,8 +10,12 @@ export class AppComponent {
   title = 'learningAngular';
   items = [
     {
-      name: 'Directives',
-      link: '/directives',
+      name: 'Day 1',
+      link: '/day1',
+    },
+    {
+      name: 'Day 2',
+      link: '/day2',
     },
   ];
 }

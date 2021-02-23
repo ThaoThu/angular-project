@@ -1,8 +1,33 @@
-<h1 class="app-title">Angular basic</h1>
-<ul>
-  <li *ngFor="let item of items">
-    <a [routerLink]="item.link">{{ item.name }}</a>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1><img src="./assets/imgs/logo.png" alt="" class="logo" /> Learning</h1>
+    <span class="menu-spacer"></span>
+    <ul class="nav-right">
+      <li *ngFor="let item of items">
+        <a
+          mat-list-item
+          [routerLink]="item.link"
+          routerLinkActive="link--active"
+          >{{ item.name }}</a
+        >
+      </li>
+    </ul>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <div *ngFor="let item of items">
+        <a mat-list-item [routerLink]="item.link">{{ item.name }}</a>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
