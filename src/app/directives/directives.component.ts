@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
   isRedColor = true;
-  userClass = { fontBold: 'txt--bold' };
+  userClass = { fontBold: true };
 
   constructor() {}
 

@@ -4,4 +4,11 @@
   This div's used ngClass
 </div>
 
-<div [ngClass]="userClass.fontBold">This div's used ngClass obj</div>
+<div [ngClass]="userClass">This div's used ngClass obj</div>
+{{ userClass | json }}
+
+<div [ngStyle]="{ 'font-size': '24px', color: 'red' }">txt red</div>
+<h1>ng Modal</h1>
+<!-- 
+<label for="">[(ngModel)]: </label>
+<input type="text" [(ngModel)]="currentItem.name" /> -->
