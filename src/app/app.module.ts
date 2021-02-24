@@ -23,6 +23,7 @@ import { ProductModule } from './product/product.module';
     // ProductDetailComponent,
   ],
   imports: [
+
     ProductModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -36,6 +37,7 @@ import { ProductModule } from './product/product.module';
     MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent, AppRoutingModule],
+  // bootstrap(AppComponent, [APP_ROUTER_PROVIDERS]);
 })
-export class AppModule {}
+export class AppModule { }

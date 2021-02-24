@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth.service';
+import { IProduct } from 'src/app/product';
+import { ProductService } from 'src/app/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -6,23 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
-  articles = [
-    {
-      id: '1',
-      slug: 'bai-viet-1',
-      title: 'Bai viet 1',
-      content: 'Day la noi dung bai viet 1',
-      updateAt: '2020-07-06T13:26:31.785Z',
-    },
-    {
-      id: '2',
-      slug: 'bai-viet-2',
-      title: 'Bai viet 2',
-      content: 'Day la noi dung bai viet 2 nhe',
-      updateAt: '2020-07-15:00:00.000Z',
-    },
-  ];
-  constructor() {}
+  productList: IProduct[] = [];
+  isLogin = false;
+  constructor(
+    private productService: ProductService,
+    private router: Router, public auth: AuthService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.productService.getProductList().subscribe(ps => this.productList = ps);
+  }
+  movePage(item: any): void {
+    this.router.navigate(['/product', item]);
+  }
+  login() {
+    this.auth.isAuth = true;
+    this.isLogin = true;
+  }
+  logout() {
+    this.auth.isAuth = false;
+    this.isLogin = false;
+  }
 }

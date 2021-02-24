@@ -8,9 +8,9 @@
   width: 250px;
 }
 
-.container {
-  padding: 10px;
-  height: 88vh;
+.container,
+.mat-drawer-content {
+  background: #f8f4f3;
 }
 .nav-right {
   margin-left: auto;

@@ -1,1 +1,38 @@
-<p>product-list works!</p>
+<div class="shop-wrapper">
+  <div class="login-wrapper">
+    <button (click)="login()">Login</button>
+    <button (click)="logout()">Logout</button>
+    <!-- <button mat-button color="primary">Primary</button> -->
+    <p class="note">
+      You
+      <span *ngIf="auth.isAuth; else logoutE"
+        >Login. You can access detail</span
+      >
+      <ng-template #logoutE> Logout. You cannot access detail </ng-template>
+    </p>
+  </div>
+  <!-- <h1 class="page-title">products list</h1> -->
+  <div class="content">
+    <div class="grid">
+      <mat-card class="card" *ngFor="let product of productList">
+        <div
+          (click)="movePage(product.id)"
+          class="card-content"
+          title="View detail"
+        >
+          <div class="card-img-wrapper">
+            <img [src]="product.imageUrl" alt="img" />
+          </div>
+          <mat-card-title>
+            <h4 class="card-title">{{ product.name }}</h4>
+          </mat-card-title>
+          <mat-card-subtitle
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit...
+            eligendi.</mat-card-subtitle
+          >
+          <!-- <a [routerLink]="['/product', product.id]">{{ product.name }}</a> -->
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

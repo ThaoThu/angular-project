@@ -12,4 +12,6 @@ export class Day1Component implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }
