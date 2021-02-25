@@ -16,6 +16,8 @@ import { MyDirectiveDirective } from './my-directive.directive';
 import { HighlightDirective } from './highlight.directive';
 import { PasswordlengthdetectorDirective } from './passwordlengthdetector.directive';
 
+import { UnlessDirective } from './unless.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +26,8 @@ import { PasswordlengthdetectorDirective } from './passwordlengthdetector.direct
     MyDirectiveDirective,
     HighlightDirective,
     PasswordlengthdetectorDirective,
+
+    UnlessDirective,
 
     // ProductListComponent,
     // ProductDetailComponent,

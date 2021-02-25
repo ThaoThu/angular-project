@@ -13,6 +13,7 @@ export class DirectivesComponent implements OnInit {
   gender = '';
   number = 0;
   color = ''
+  render = false;
   days = [
     {
       name: 'Sunday', value: 1

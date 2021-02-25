@@ -22,6 +22,9 @@
     (change)="isTxtBold = !isTxtBold"
   />
   <label for="cb1">Add font weight bold and large font-size style</label>
+
+  <p>Use ngNonBindable to stop evaluation.</p>
+  <p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>
   <hr />
   <div>List authors</div>
   <select name="gender" id="" [(ngModel)]="gender">
@@ -31,9 +34,10 @@
   </select>
 gender:{{gender}}
   <ng-container *ngFor="let item of authors; index as idx; count as total; odd as odd">
-    <h2 *ngIf="gender === item.gender.toLowerCase() || gender===''">
+    <h2 *ngIf="gender === item.gender.toLowerCase() || gender===''
+    ">
       <span [ngClass]="{ 'odd-child': odd }">
-        <a *ngIf="gender"> {{ idx + 1 }} / {{ total }} : </a>
+        <a *ngIf="!gender"> {{ idx + 1 }} / {{ total }} : </a>
         {{ item.firstName }} - <b>{{ item.gender }}</b> -
         {{ item.email }}
       </span>
@@ -45,7 +49,8 @@ gender:{{gender}}
   <input type="number" [(ngModel)]="number" min="1" />
   <hr />
   <span [ngSwitch]="number">
-    <p *ngSwitchCase="0"></p>
+    <p *ngSwitchCase=""></p>
+    <!-- <p *ngSwitchCase="1">a</p> -->
     <ng-container *ngFor="let item of days">
       <p *ngSwitchCase="item.value">{{ item.name }}</p>
     </ng-container>
@@ -54,7 +59,8 @@ gender:{{gender}}
 </div>
 <div class="box">
   <h2>2.Custom directives</h2>
-  <h2>Pick a highlight color</h2>
+  <h4> 2.1 Custom Attribute directive</h4>
+  <h2>Pick a highlight color and hover the text</h2>
   <div>
     <input type="radio" name="colors" (click)="color='lightgreen'">Green
     <input type="radio" name="colors" (click)="color='yellow'">Yellow
@@ -71,4 +77,11 @@ gender:{{gender}}
        </td>
     </tr>
 </table>
+<h4>2.2 Custom Structure directive</h4>
+<input type="radio" name = "render" checked="render"  (change)="render= true">True
+<input type="radio"  name = "render" checked="render"  (change)="render= false">False
+render value:{{render}}
+<p *appUnless="render" class="unless a">
+  (A) This paragraph is used custom structure directive. It is showed because the condition is false.
+</p>
 </div>
