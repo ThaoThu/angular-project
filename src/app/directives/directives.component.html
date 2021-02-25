@@ -1,14 +1,74 @@
-<div>Built-in attribute directives</div>
+<div class="box">
+  <h2>1.Built-in attribute directives</h2>
 
-<div [ngClass]="isRedColor ? 'txt--red' : 'txt--green'">
-  This div's used ngClass
+  <h3
+    [ngStyle]="{
+      'font-weight': isTxtBold ? 'bold' : '',
+      'font-size': isTxtBold ? '30px' : ''
+    }"
+    [class]="{ 'txt--red': classTxtRed }"
+  >
+    Let's style text.
+  </h3>
+
+  <input type="checkbox" name="cb2" id="cb2" [(ngModel)]="classTxtRed" />
+  <label for="cb2">Add class txt--red</label>
+  <br />
+  <input
+    type="checkbox"
+    name="cb1"
+    id="cb1"
+    [value]="isTxtBold"
+    (change)="isTxtBold = !isTxtBold"
+  />
+  <label for="cb1">Add font weight bold and large font-size style</label>
+  <hr />
+  <div>List authors</div>
+  <select name="gender" id="" [(ngModel)]="gender">
+    <option value="">All</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+gender:{{gender}}
+  <ng-container *ngFor="let item of authors; index as idx; count as total; odd as odd">
+    <h2 *ngIf="gender === item.gender.toLowerCase() || gender===''">
+      <span [ngClass]="{ 'odd-child': odd }">
+        <a *ngIf="gender"> {{ idx + 1 }} / {{ total }} : </a>
+        {{ item.firstName }} - <b>{{ item.gender }}</b> -
+        {{ item.email }}
+      </span>
+    </h2>
+  </ng-container>
+
+  
+  <label for="day">Enter day number. I'll show the day's name: </label>
+  <input type="number" [(ngModel)]="number" min="1" />
+  <hr />
+  <span [ngSwitch]="number">
+    <p *ngSwitchCase="0"></p>
+    <ng-container *ngFor="let item of days">
+      <p *ngSwitchCase="item.value">{{ item.name }}</p>
+    </ng-container>
+    <p *ngSwitchDefault>Invalid input</p>
+  </span>
 </div>
-
-<div [ngClass]="userClass">This div's used ngClass obj</div>
-{{ userClass | json }}
-
-<div [ngStyle]="{ 'font-size': '24px', color: 'red' }">txt red</div>
-<h1>ng Modal</h1>
-<!-- 
-<label for="">[(ngModel)]: </label>
-<input type="text" [(ngModel)]="currentItem.name" /> -->
+<div class="box">
+  <h2>2.Custom directives</h2>
+  <h2>Pick a highlight color</h2>
+  <div>
+    <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    <input type="radio" name="colors" (click)="color='cyan'">Cyan
+  </div>
+  <div [appHighlight]="color">Txt with the custom directive</div>
+  <table>
+    <tr>
+       <td>
+         <label>Please enter your password to see the change :-</label>
+       </td>
+       <td>
+         <input type="text" appPasswordlengthdetector />
+       </td>
+    </tr>
+</table>
+</div>

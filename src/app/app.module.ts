@@ -12,12 +12,18 @@ import { AppComponent } from './app.component';
 import { Day1Component } from './day1-Routing/day1.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ProductModule } from './product/product.module';
+import { MyDirectiveDirective } from './my-directive.directive';
+import { HighlightDirective } from './highlight.directive';
+import { PasswordlengthdetectorDirective } from './passwordlengthdetector.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     DirectivesComponent,
     Day1Component,
+    MyDirectiveDirective,
+    HighlightDirective,
+    PasswordlengthdetectorDirective,
 
     // ProductListComponent,
     // ProductDetailComponent,
