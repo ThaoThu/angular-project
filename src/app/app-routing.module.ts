@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { Day1Component } from './day1-Routing/day1.component';
-import { DirectivesComponent } from './directives/directives.component';
+import { DirectivesComponent } from './day2-Directives/directives.component';
+import { Day3TemplatesComponent } from './day3-templates/day3-templates.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
@@ -12,14 +13,17 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/day2',
+    redirectTo: '/day3',
     pathMatch: 'full',
   },
   {
     path: 'day2',
     component: DirectivesComponent,
   },
-
+  {
+    path: 'day3',
+    component: Day3TemplatesComponent,
+  },
   {
     path: '**',
     component: NotFoundComponent,

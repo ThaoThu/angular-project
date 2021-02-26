@@ -1,0 +1,14 @@
+
+<div *ngIf="hero;else author1">
+    
+    <h3>{{hero.name}} says:</h3>
+    <p>I, {{hero.name}}, am at your service, {{masterName}}.</p>
+</div>
+<ng-template #author1>
+
+<div>
+    <strong>{{author.firstName}} {{author.lastName}}</strong>
+    <button (click)="handleDelete()">x</button>
+</div>
+
+</ng-template>

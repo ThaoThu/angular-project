@@ -10,13 +10,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Day1Component } from './day1-Routing/day1.component';
-import { DirectivesComponent } from './directives/directives.component';
+import { DirectivesComponent } from './day2-Directives/directives.component';
 import { ProductModule } from './product/product.module';
 import { MyDirectiveDirective } from './my-directive.directive';
 import { HighlightDirective } from './highlight.directive';
 import { PasswordlengthdetectorDirective } from './passwordlengthdetector.directive';
 
 import { UnlessDirective } from './unless.directive';
+import { Day3TemplatesComponent } from './day3-templates/day3-templates.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { HeroChildComponent } from './hero-child/hero-child.component';
+import { HeroParentComponent } from './hero-parent/hero-parent.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,14 @@ import { UnlessDirective } from './unless.directive';
     PasswordlengthdetectorDirective,
 
     UnlessDirective,
+
+    Day3TemplatesComponent,
+
+    ProgressBarComponent,
+
+    HeroChildComponent,
+
+    HeroParentComponent,
 
     // ProductListComponent,
     // ProductDetailComponent,

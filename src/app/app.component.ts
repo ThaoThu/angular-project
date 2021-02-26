@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DirectivesComponent } from './directives/directives.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +15,10 @@ export class AppComponent {
     {
       name: 'Day 2',
       link: '/day2',
+    },
+    {
+      name: 'Day 3',
+      link: '/day3',
     },
   ];
 }
