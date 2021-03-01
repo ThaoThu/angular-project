@@ -9,16 +9,13 @@ export class AppComponent {
   title = 'learningAngular';
   items = [
     {
-      name: 'Day 1',
-      link: '/day1',
+      name: 'Home',
+      link: '/home',
     },
     {
-      name: 'Day 2',
-      link: '/day2',
+      name: 'Products',
+      link: '/product',
     },
-    {
-      name: 'Day 3',
-      link: '/day3',
-    },
+    
   ];
 }

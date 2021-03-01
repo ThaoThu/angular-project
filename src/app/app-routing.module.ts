@@ -1,29 +1,25 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-import { Day1Component } from './day1-Routing/day1.component';
-import { DirectivesComponent } from './day2-Directives/directives.component';
-import { Day3TemplatesComponent } from './day3-templates/day3-templates.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path: 'day1',
-    component: Day1Component,
+    path: 'home',
+    component: HomeComponent,
+    
   },
+
   {
     path: '',
-    redirectTo: '/day3',
+    redirectTo: '/product',
     pathMatch: 'full',
   },
   {
-    path: 'day2',
-    component: DirectivesComponent,
+    path : 'product',
+    loadChildren : () => import('./product/product.module').then(m => m.ProductModule)
   },
-  {
-    path: 'day3',
-    component: Day3TemplatesComponent,
-  },
+// ,
   {
     path: '**',
     component: NotFoundComponent,
@@ -31,7 +27,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy : PreloadAllModules
+  })],
   exports: [RouterModule],
 })
 export class AppRoutingModule { }

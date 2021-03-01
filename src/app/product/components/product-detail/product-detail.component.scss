@@ -1,0 +1,41 @@
+.product-wrapper {
+  padding: 30px;
+
+  margin: 0 auto;
+  .product-item {
+    display: flex;
+    margin-top: 50px;
+  }
+  img {
+    width: 300px;
+    margin-right: 30px;
+  }
+}
+.link-back {
+  display: inline-block;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.card-btn{
+  display: flex;
+  color: #fff;
+  background-color: #0275d8;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border:none;
+  outline: none;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  cursor: pointer;
+  
+
+}

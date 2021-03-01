@@ -1,0 +1,20 @@
+<div class="product-wrapper" *ngIf="product">
+  <!-- <h2>Product details</h2> -->
+
+  <a (click)="back()" >
+    <mat-icon >arrow_back</mat-icon>
+   </a
+  >
+
+  <div class="product-item">
+    <div class="product-img">
+      <img [src]="product.imageUrl" alt="img" />
+    </div>
+    <div class="product-detail">
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.price | currency:'VND' }}</p>
+
+      <button class="card-btn"><mat-icon>add_shopping_cart</mat-icon> {{'Add to card'|  uppercase }}</button>
+    </div>
+  </div>
+</div>

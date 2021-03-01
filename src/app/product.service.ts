@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { delay } from 'rxjs/operators';
-import { IProduct } from './product';
+import { IProduct } from './product'; 
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +14,8 @@ export class ProductService {
       name: 'Crossed design dress',
       price: 15.99,
       imageUrl: './assets/imgs/1.jpeg',
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
+
       categories: [
         'female',
         'dress'
@@ -24,6 +26,7 @@ export class ProductService {
       name: 'Fitted textured dress',
       price: 19.99,
       imageUrl: './assets/imgs/2.jpeg',
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
         'female',
@@ -35,6 +38,7 @@ export class ProductService {
       name: 'Neoprene effect dress',
       price: 20.49,
       imageUrl: './assets/imgs/3.jpeg',
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
         'female',
@@ -46,7 +50,7 @@ export class ProductService {
       name: 'Printed ruffle dress',
       price: 49.99,
       imageUrl: './assets/imgs/4.jpeg',
-
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
       categories: [
         'female',
         'dress'
@@ -57,6 +61,7 @@ export class ProductService {
       name: 'Message cotton t-shirt',
       price: 24.99,
       imageUrl: './assets/imgs/2.jpeg',
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
         'male',
@@ -68,6 +73,7 @@ export class ProductService {
       name: 'Regular fit chest pocket shirt',
       price: 20.99,
       imageUrl: './assets/imgs/3.jpeg',
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
         'male',
@@ -79,6 +85,7 @@ export class ProductService {
       name: 'Regular fit printed cotton shirt',
       price: 29.99,
       imageUrl: './assets/imgs/1.jpeg',
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
         'male',
@@ -90,6 +97,7 @@ export class ProductService {
       name: 'Striped cotton t-shirt',
       price: 55.99,
       imageUrl: './assets/imgs/4.jpeg',
+      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
         'male',

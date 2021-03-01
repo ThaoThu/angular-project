@@ -12,6 +12,8 @@ import { ProductService } from 'src/app/product.service';
 export class ProductListComponent implements OnInit {
   productList: IProduct[] = [];
   isLogin = false;
+  filter = ''
+  
   constructor(
     private productService: ProductService,
     private router: Router, public auth: AuthService) { }
@@ -29,5 +31,17 @@ export class ProductListComponent implements OnInit {
   logout() {
     this.auth.isAuth = false;
     this.isLogin = false;
+  }
+
+  handleChange(e: any){
+    this.filter = e.target.value
+    console.log('this.filter', this.filter);
+    
+  }
+
+  onchangeInput(event: any) {
+    console.log(event);
+    
+
   }
 }

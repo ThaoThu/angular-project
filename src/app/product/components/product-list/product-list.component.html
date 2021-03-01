@@ -1,3 +1,5 @@
+
+
 <div class="shop-wrapper">
   <div class="login-wrapper">
     <button (click)="login()">Login</button>
@@ -11,14 +13,17 @@
       <ng-template #logoutE> Logout. You cannot access detail </ng-template>
     </p>
   </div>
-  <!-- <h1 class="page-title">products list</h1> -->
+  <!-- <h1 class="page-title">products list</h1>  [appTooltip] = "'aa'" -->
   <div class="content">
+    <input [(ngModel)]="filter"  placeholder='search by name'/>
     <div class="grid">
-      <mat-card class="card" *ngFor="let product of productList">
+      <mat-card class="card" *ngFor="let product of productList | filterQuery :  filter">
         <div
           (click)="movePage(product.id)"
-          class="card-content"
-          title="View detail"
+          class="card-content" 
+          [appTooltip] = "product.description"
+
+       
         >
           <div class="card-img-wrapper">
             <img [src]="product.imageUrl" alt="img" />
@@ -27,8 +32,7 @@
             <h4 class="card-title">{{ product.name }}</h4>
           </mat-card-title>
           <mat-card-subtitle
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit...
-            eligendi.</mat-card-subtitle
+            >{{product.description | shortenText : 30}}</mat-card-subtitle
           >
           <!-- <a [routerLink]="['/product', product.id]">{{ product.name }}</a> -->
         </div>

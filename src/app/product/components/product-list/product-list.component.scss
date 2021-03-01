@@ -29,7 +29,7 @@
   font-size: 30px;
 }
 .shop-wrapper {
-  background-image: url("../../../assets/imgs/shopping.jpg");
+  background-image: url("../../../../assets/imgs/shopping.jpg");
 }
 .content {
   max-width: 80vw;
@@ -62,4 +62,16 @@
       content: "*";
     }
   }
+}
+
+
+input{
+  color: #333;
+
+	margin: 0 auto;
+  padding: 1rem 1.5rem;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border:none;
 }

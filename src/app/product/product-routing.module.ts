@@ -2,19 +2,15 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../auth.guard';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductComponent } from './components/product/product.component';
 const productRoutes: Routes = [
-  // {
-  //   path: 'product',
-  //   component: ProductListComponent,
-  // },
-  // {
-  //   path: 'product/:id',
-  //   component: ProductDetailComponent,
-  // },
+
   {
-    path: 'product',
+    path: '',
+    component : ProductComponent,
+    
     children: [
       {
         path: '',

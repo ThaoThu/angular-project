@@ -1,13 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductRoutingModule } from './product-routing.module';
 import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { RouterModule } from '@angular/router';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { TooltipDirective } from './directives/tooltip.directive';
+import { ProductRoutingModule } from './product-routing.module';
+import { ProductComponent } from './components/product/product.component';
+import { MatIconModule } from '@angular/material/icon';
+import { ShortenTextPipe } from './pipes/shorten-text.pipe';
+import { FormsModule } from '@angular/forms';
+import { FilterQueryPipe } from './pipes/filter-query.pipe';
 @NgModule({
-  declarations: [ProductDetailComponent, ProductListComponent],
-  imports: [CommonModule, ProductRoutingModule, MatCardModule, MatGridListModule, RouterModule]
+  declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe],
+  imports: [
+    RouterModule,
+    ProductRoutingModule,
+    FormsModule,
+    CommonModule,
+    MatCardModule,
+    MatIconModule
+    
+  ]
+
 })
 export class ProductModule { }

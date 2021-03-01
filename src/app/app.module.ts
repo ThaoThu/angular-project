@@ -9,44 +9,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Day1Component } from './day1-Routing/day1.component';
-import { DirectivesComponent } from './day2-Directives/directives.component';
-import { ProductModule } from './product/product.module';
-import { MyDirectiveDirective } from './my-directive.directive';
-import { HighlightDirective } from './highlight.directive';
-import { PasswordlengthdetectorDirective } from './passwordlengthdetector.directive';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-import { UnlessDirective } from './unless.directive';
-import { Day3TemplatesComponent } from './day3-templates/day3-templates.component';
-import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { HeroChildComponent } from './hero-child/hero-child.component';
-import { HeroParentComponent } from './hero-parent/hero-parent.component';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DirectivesComponent,
-    Day1Component,
-    MyDirectiveDirective,
-    HighlightDirective,
-    PasswordlengthdetectorDirective,
+    HomeComponent,
+    NotFoundComponent,
 
-    UnlessDirective,
-
-    Day3TemplatesComponent,
-
-    ProgressBarComponent,
-
-    HeroChildComponent,
-
-    HeroParentComponent,
-
-    // ProductListComponent,
-    // ProductDetailComponent,
   ],
   imports: [
 
-    ProductModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     BrowserModule,
@@ -60,6 +39,6 @@ import { HeroParentComponent } from './hero-parent/hero-parent.component';
   ],
   providers: [],
   bootstrap: [AppComponent, AppRoutingModule],
-  // bootstrap(AppComponent, [APP_ROUTER_PROVIDERS]);
+
 })
 export class AppModule { }
