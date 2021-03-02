@@ -11,8 +11,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { ShortenTextPipe } from './pipes/shorten-text.pipe';
 import { FormsModule } from '@angular/forms';
 import { FilterQueryPipe } from './pipes/filter-query.pipe';
+import { BannerComponent } from './components/banner/banner.component';
 @NgModule({
-  declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe],
+  declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe, BannerComponent],
   imports: [
     RouterModule,
     ProductRoutingModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { QaComponent } from './qa/qa.component';
 
 const routes: Routes = [
   {
@@ -19,11 +20,17 @@ const routes: Routes = [
     path : 'product',
     loadChildren : () => import('./product/product.module').then(m => m.ProductModule)
   },
-// ,
+  {
+    path : 'q&a',
+    component : QaComponent
+
+  }
+,
   {
     path: '**',
     component: NotFoundComponent,
   },
+  
 ];
 
 @NgModule({

@@ -1,0 +1,16 @@
+<button (click)="isShow = !isShow">Delete all</button>
+<div>
+<label for="">number 1</label>
+    <input type="text"  [(ngModel)]="number1">
+</div>
+<div>
+    <label for="">number 2</label>
+        <input type="text"  [(ngModel)]="number2">
+    </div>
+
+    <button (click)="sum()">Get sum</button>
+<div *ngIf="isShow">
+<ng-container *ngFor="let item of questionAnswer">
+        <app-item [question]="item.q" [answers]="item.a" [total]="total"></app-item>
+    </ng-container>
+</div>

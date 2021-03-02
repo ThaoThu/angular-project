@@ -16,6 +16,11 @@ export class AppComponent {
       name: 'Products',
       link: '/product',
     },
+    {
+      name: 'Questions & Answers',
+      link: '/q&a',
+    },
+    
     
   ];
 }
