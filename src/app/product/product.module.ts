@@ -20,6 +20,8 @@ import { SmallBannerItemComponent } from './components/small-banner-item/small-b
 import { CardComponent } from './components/card/card.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { ProductCommentComponent } from './components/product-comment/product-comment.component';
+import { SharedModule } from '../shared/shared.module';
+// import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe, BannerComponent, SmallBannerComponent, SmallBannerItemComponent, CardComponent, ProductPageComponent, ProductCommentComponent],
   imports: [
@@ -29,7 +31,8 @@ import { ProductCommentComponent } from './components/product-comment/product-co
     CommonModule,
     MatCardModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    SharedModule
   
     
   ]

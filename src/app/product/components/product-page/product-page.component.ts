@@ -10,27 +10,27 @@ import { ProductService } from 'src/app/product.service';
 })
 export class ProductPageComponent implements OnInit {
   isLogin = false;
+  pagination = {
+    page: 1,
+    totalPage : 2,
+    pageSize : 4
+  }
 
 
-  isDarkTheme = true
   constructor(
-    private productService: ProductService,
-    private router: Router, public auth: AuthService) { }
+    ) { }
 
 
   ngOnInit(): void {
-  }
-  hangleChangeSwitch (){
-    this.isDarkTheme = !this.isDarkTheme
-  }
-  login() {
-    this.auth.isAuth = true;
-    this.isLogin = true;
-  }
-  logout() {
-    this.auth.isAuth = false;
-    this.isLogin = false;
+  
   }
 
+  changePage(page:any){
+    console.log('page', page);
+  
+    
+    
+
+  }
 
 }

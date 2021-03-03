@@ -11,11 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { QaComponent } from './qa/qa.component';
-import { ItemComponent } from './qa/components/item/item.component';
-import { Child1Component } from './styles/child1/child1.component';
-import { Child2Component } from './styles/child2/child2.component';
-import { Child3Component } from './styles/child3/child3.component';
+
+
 
 
 
@@ -27,11 +24,7 @@ import { Child3Component } from './styles/child3/child3.component';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    QaComponent,
-    ItemComponent,
-    Child1Component,
-    Child2Component,
-    Child3Component,
+
 
   ],
   imports: [
