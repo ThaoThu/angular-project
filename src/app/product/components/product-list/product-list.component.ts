@@ -11,6 +11,12 @@ import { ProductService } from 'src/app/product.service';
 })
 export class ProductListComponent implements OnInit {
   productList: IProduct[] = [];
+  pagination = {
+    page: 1,
+    totalPage : 2,
+    pageSize : 4
+  }
+
   isLogin = false;
   filter = ''
   isDarkTheme = true
@@ -33,7 +39,11 @@ export class ProductListComponent implements OnInit {
     this.auth.isAuth = false;
     this.isLogin = false;
   }
-
+  changePage(page:any){
+    console.log('page', page);
+    this.productService.getProductList().subscribe(ps => this.productList = ps.reverse());
+  
+  }
   handleChange(e: any){
     this.filter = e.target.value
     console.log('this.filter', this.filter);

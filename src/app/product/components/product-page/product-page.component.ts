@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from 'src/app/auth.service';
-import { ProductService } from 'src/app/product.service';
 
 @Component({
   selector: 'app-product-page',
@@ -10,11 +7,6 @@ import { ProductService } from 'src/app/product.service';
 })
 export class ProductPageComponent implements OnInit {
   isLogin = false;
-  pagination = {
-    page: 1,
-    totalPage : 2,
-    pageSize : 4
-  }
 
 
   constructor(
@@ -25,12 +17,6 @@ export class ProductPageComponent implements OnInit {
   
   }
 
-  changePage(page:any){
-    console.log('page', page);
-  
-    
-    
 
-  }
 
 }
