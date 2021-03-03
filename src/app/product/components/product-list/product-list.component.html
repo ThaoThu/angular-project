@@ -1,26 +1,25 @@
 
-<!-- 
-<app-banner txt1='100% Healthy & Affordable' txt2='        Organic 
-<br/>
-Vegetables' txt3='Small Changes Big Difference' cclass="full-banner"></app-banner> -->
+
+
+
+
 <div class="shop-wrapper">
   <div class="login-wrapper">
     <button (click)="login()">Login</button>
     <button (click)="logout()">Logout</button>
-    <!-- <button mat-button color="primary">Primary</button> -->
-    <p class="note">
+    <p class="note txt--center">
       You
       <span *ngIf="auth.isAuth; else logoutE"
         >Login. You can access detail</span
       >
       <ng-template #logoutE> Logout. You cannot access detail </ng-template>
     </p>
+    <mat-slide-toggle (change) = "hangleChangeSwitch()" [checked] = "isDarkTheme">Card Background : <b>{{isDarkTheme ? 'Dark' : 'Light'}}</b></mat-slide-toggle>
   </div>
-  <!-- <h1 class="page-title">products list</h1>  [appTooltip] = "'aa'" -->
-  <div class="content">
+  <div class="content txt--center " >
     <input [(ngModel)]="filter"  placeholder='search by name'/>
     <div class="grid">
-      <mat-card class="card" *ngFor="let product of productList | filterQuery :  filter">
+      <app-card class="card" [ngClass]="{'light-card': !isDarkTheme}" *ngFor="let product of productList | filterQuery :  filter">
         <div
           (click)="movePage(product.id)"
           class="card-content" 
@@ -31,18 +30,17 @@ Vegetables' txt3='Small Changes Big Difference' cclass="full-banner"></app-banne
           <div class="card-img-wrapper">
             <img [src]="product.imageUrl" alt="img" />
           </div>
-          <mat-card-title>
-            <h4 class="card-title">{{ product.name }}</h4>
-          </mat-card-title>
-          <mat-card-subtitle
-            >{{product.description | shortenText : 30}}</mat-card-subtitle
-          >
-          <!-- <a [routerLink]="['/product', product.id]">{{ product.name }}</a> -->
+     
+            <div class="card-title">{{ product.name }}</div>
+            <p>{{product.price | currency: 'VND'}}</p>
+    
+     
+            {{product.description | shortenText : 30}}
+        
+
         </div>
-      </mat-card>
+      </app-card>
     </div>
   </div>
 </div>
-<!-- <app-banner txt1='SPECIAL DISCOUNT' txt2='        For all Grocery  
-&nbsp;
-products' txt3='Take now 20% off for all grocer product.' cclass="small-banner"></app-banner> -->
+

@@ -13,6 +13,7 @@ export class ProductListComponent implements OnInit {
   productList: IProduct[] = [];
   isLogin = false;
   filter = ''
+  isDarkTheme = true
   
   constructor(
     private productService: ProductService,
@@ -37,6 +38,9 @@ export class ProductListComponent implements OnInit {
     this.filter = e.target.value
     console.log('this.filter', this.filter);
     
+  }
+  hangleChangeSwitch (){
+    this.isDarkTheme = !this.isDarkTheme
   }
 
   onchangeInput(event: any) {

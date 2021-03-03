@@ -11,9 +11,9 @@ export class ProductService {
   private products: IProduct[] = [
     {
       id: '855d9c00',
-      name: 'Crossed design dress',
+      name: 'Fresh green vegetable',
       price: 15.99,
-      imageUrl: './assets/imgs/1.jpeg',
+      imageUrl: './assets/imgs/product1.jpg',
       description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
@@ -23,9 +23,9 @@ export class ProductService {
     },
     {
       id: '855d9c01',
-      name: 'Fitted textured dress',
+      name: 'Fresh river fish',
       price: 19.99,
-      imageUrl: './assets/imgs/2.jpeg',
+      imageUrl: './assets/imgs/product2.jpg',
       description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
@@ -35,9 +35,9 @@ export class ProductService {
     },
     {
       id: '855d9c02',
-      name: 'Neoprene effect dress',
+      name: 'Fresh pomegranate',
       price: 20.49,
-      imageUrl: './assets/imgs/3.jpeg',
+      imageUrl: './assets/imgs/product3.jpg',
       description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
 
       categories: [
@@ -47,63 +47,16 @@ export class ProductService {
     },
     {
       id: '855d9c03',
-      name: 'Printed ruffle dress',
+      name: 'Cabbage vegetables',
       price: 49.99,
-      imageUrl: './assets/imgs/4.jpeg',
+      imageUrl: './assets/imgs/product4.jpg',
       description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
       categories: [
         'female',
         'dress'
       ]
     },
-    {
-      id: '855d9c04',
-      name: 'Message cotton t-shirt',
-      price: 24.99,
-      imageUrl: './assets/imgs/2.jpeg',
-      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
-
-      categories: [
-        'male',
-        'shirt'
-      ]
-    },
-    {
-      id: '855d9c05',
-      name: 'Regular fit chest pocket shirt',
-      price: 20.99,
-      imageUrl: './assets/imgs/3.jpeg',
-      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
-
-      categories: [
-        'male',
-        'shirt'
-      ]
-    },
-    {
-      id: '855d9c06',
-      name: 'Regular fit printed cotton shirt',
-      price: 29.99,
-      imageUrl: './assets/imgs/1.jpeg',
-      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
-
-      categories: [
-        'male',
-        'shirt'
-      ]
-    },
-    {
-      id: '855d9c07',
-      name: 'Striped cotton t-shirt',
-      price: 55.99,
-      imageUrl: './assets/imgs/4.jpeg',
-      description : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore fuga, ipsam hic illo omnis ipsum libero voluptates accusamus. Modi eos voluptatem, vero eligendi aliquid maxime accusantium unde enim quidem nostrum.',
-
-      categories: [
-        'male',
-        'shirt'
-      ]
-    }
+   
   ];
   constructor() { }
   getProductList(): Observable<IProduct[]> {

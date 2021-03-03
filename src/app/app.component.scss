@@ -8,9 +8,9 @@
   width: 250px;
 }
 
-.container,
-.mat-drawer-content {
-  background: #f8f4f3;
+.container
+ {
+overflow-x: hidden;
 }
 .nav-right {
   margin-left: auto;
@@ -30,3 +30,5 @@
     color: greenyellow;
   }
 }
+
+

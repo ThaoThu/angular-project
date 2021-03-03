@@ -1,10 +1,11 @@
-<div class="product-wrapper" *ngIf="product">
-  <!-- <h2>Product details</h2> -->
+<div class="breadcum">
 
-  <a (click)="back()" >
-    <mat-icon >arrow_back</mat-icon>
-   </a
-  >
+  <a routerLink="/product">Product</a> >
+  Details
+
+</div>
+
+<div class="product-wrapper" *ngIf="product">
 
   <div class="product-item">
     <div class="product-img">
@@ -13,8 +14,16 @@
     <div class="product-detail">
       <h2>{{ product.name }}</h2>
       <p>{{ product.price | currency:'VND' }}</p>
+      <div>
+        {{product.description}}
+      </div>
 
-      <button class="card-btn"><mat-icon>add_shopping_cart</mat-icon> {{'Add to card'|  uppercase }}</button>
+      <button class="card-btn">{{'Add to card'|  uppercase }}</button>
     </div>
   </div>
 </div>
+
+<app-product-comment></app-product-comment>
+
+
+<app-product-list></app-product-list>

@@ -14,9 +14,7 @@
   
   
     h1{
-      margin-bottom: 10px;
-      font-size: 63px;
-      line-height: 63px;
+   
     }
     p{
       margin-bottom: 25px;
@@ -53,4 +51,11 @@
     @extend .full-banner;
     background-image: url('../../../../assets/imgs/banner.jpg');
     height: 380px;
+}
+
+
+ .banner__content ::ng-deep h1 {
+  margin-bottom: 10px;
+  font-size: 63px;
+  line-height: 63px;
 }

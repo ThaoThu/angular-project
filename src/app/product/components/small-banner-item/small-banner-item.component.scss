@@ -1,0 +1,40 @@
+:host{
+    display: flex;
+    justify-content: space-between;
+}
+.small-banner-item {
+    padding : 0 60px;
+    display: flex;
+    align-items: center;
+}
+.small-banner-item p{
+    font-size: 16px;
+    color: #89c74a;
+    margin-bottom: 10px;
+}
+
+h5{
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 500;
+    color: #323232;
+}
+
+a{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 14px;
+    border: 1px solid #323232;
+    border-radius: 30px;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
+    color: #323232;
+    text-transform: uppercase;
+    transition: 0.2s;
+    &:hover{
+        color: #fff;
+        background: #89c74a;
+        border-color: #89c74a;
+    }
+}

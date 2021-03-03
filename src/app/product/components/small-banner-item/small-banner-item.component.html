@@ -1,0 +1,10 @@
+<div class="small-banner-item" *ngFor="let text of data" [ngStyle]="{'background-image': 'url('+text.bg+')'}">
+   
+   <div [ngStyle]="{'height': 'auto'}">
+       <p>{{text.txt1}}</p>
+       <h5>{{text.txt2}}</h5>
+       <p>{{text.txt3}}</p>
+       <a href="">Buy now</a>
+
+   </div>
+</div>

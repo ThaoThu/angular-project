@@ -1,16 +1,22 @@
 
-
+.shop-wrapper{
+  margin-bottom: 100px;
+}
 .card {
   margin-top: 30px;
   width: 20%;
 
   .card-img-wrapper {
     overflow: hidden;
-    height: 360px;
+ 
   }
   .card-title {
-    font-size: 26px;
+    font-size: 14px;
+    line-height: 18px;
     margin: 15px 0 20px;
+
+      color : #89c74a;
+  
   }
 
   img {
@@ -30,11 +36,9 @@
   text-transform: uppercase;
   font-size: 30px;
 }
-.shop-wrapper {
-  background-image: url("../../../../assets/imgs/shopping.jpg");
-}
+
 .content {
-  max-width: 80vw;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .card-content {
@@ -75,6 +79,17 @@ input{
   background-color: rgb(255, 255, 255);
   border: none;
   border:none;
+}
+
+.txt--center{
+  text-align: center;
+}
+:host-context(.light-card) mat-card{
+  background: #fff;
+}
+
+mat-card{
+  background : #333;
 }
 
 
