@@ -21,9 +21,11 @@ import { CardComponent } from './components/card/card.component';
 import { ProductPageComponent } from './components/product-page/product-page.component';
 import { ProductCommentComponent } from './components/product-comment/product-comment.component';
 import { SharedModule } from '../shared/shared.module';
+import { TestViewchildComponent } from './components/forms/test-viewchild/test-viewchild.component';
+import { TestViewchildChildComponent } from './components/forms/test-viewchild-child/test-viewchild-child.component';
 // import { SharedModule } from '../shared/shared.module';
 @NgModule({
-  declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe, BannerComponent, SmallBannerComponent, SmallBannerItemComponent, CardComponent, ProductPageComponent, ProductCommentComponent],
+  declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe, BannerComponent, SmallBannerComponent, SmallBannerItemComponent, CardComponent, ProductPageComponent, ProductCommentComponent, TestViewchildComponent, TestViewchildChildComponent],
   imports: [
     RouterModule,
     ProductRoutingModule,

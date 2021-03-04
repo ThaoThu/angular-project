@@ -1,19 +1,6 @@
 <div class="shop-wrapper">
-  <div class="login-wrapper">
-    <button (click)="login()">Login</button>
-    <button (click)="logout()">Logout</button>
-    <p class="note txt--center">
-      You
-      <span *ngIf="auth.isAuth; else logoutE"
-        >Login. You can access detail</span
-      >
-      <ng-template #logoutE> Logout. You cannot access detail </ng-template>
-    </p>
-
-    <mat-slide-toggle
-      #toggle
-      (change)="hangleChangeSwitch()"
-      [checked]="isDarkTheme"
+  <div class="txt--center">
+    <mat-slide-toggle (change)="hangleChangeSwitch()" [checked]="isDarkTheme"
       >Card Background :
       <b>{{ isDarkTheme ? "Dark" : "Light" }}</b></mat-slide-toggle
     >

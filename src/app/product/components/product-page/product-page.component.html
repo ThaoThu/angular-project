@@ -9,10 +9,17 @@
   </h1>
 </app-banner>
 <app-small-banner></app-small-banner>
-<!-- <div class="login-wrapper">
+<div class="login-wrapper">
   <button (click)="productListCom.login()">Login</button>
   <button (click)="productListCom.logout()">Logout</button>
-</div> -->
+  <p class="note txt--center">
+    You
+    <span *ngIf="productListCom.auth.isAuth; else logoutE"
+      >Login. You can access detail</span
+    >
+    <ng-template #logoutE> Logout. You cannot access detail </ng-template>
+  </p>
+</div>
 <app-product-list #productListCom></app-product-list>
 
 <app-banner

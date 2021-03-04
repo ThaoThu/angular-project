@@ -7,15 +7,19 @@ ul.pagination {
     padding: 0;
     margin: 0;
 
-li {
-    display: inline;
-    a {
-        color: black;
-        float: left;
-        padding: 8px 16px;
-        text-decoration: none;
-        border-radius: 5px;
-        cursor: pointer;
+    li {
+        display: inline;
+        a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            &.disable{
+                cursor: not-allowed;
+                background-color: #eee;
+            }
         }
 
     }
@@ -30,9 +34,6 @@ a.active {
     color: white;
     
 }
-a.disable{
-    cursor: not-allowed;
-    background-color: #eee;
-}
+
 
 li a:hover:not(.active) {background-color: #ddd;}

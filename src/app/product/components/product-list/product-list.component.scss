@@ -69,12 +69,11 @@
 
 input {
   color: #333;
-  margin: 0 auto;
+  margin: 10px auto;
   padding: 1rem 1.5rem;
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
-  border: none;
-  border: none;
+  border: 1px solid #eee;
 }
 
 .txt--center {
@@ -86,4 +85,5 @@ input {
 
 mat-card {
   background: #333;
+  // color: $green;
 }
