@@ -1,5 +1,4 @@
-
-.shop-wrapper{
+.shop-wrapper {
   margin-bottom: 100px;
 }
 .card {
@@ -8,15 +7,13 @@
 
   .card-img-wrapper {
     overflow: hidden;
- 
   }
   .card-title {
     font-size: 14px;
     line-height: 18px;
     margin: 15px 0 20px;
 
-      color : #89c74a;
-  
+    color: #89c74a;
   }
 
   img {
@@ -45,7 +42,7 @@
   cursor: pointer;
 }
 
-.login-wrapper {
+::ng-deep .login-wrapper {
   text-align: center;
   margin-top: 30px;
   button {
@@ -70,26 +67,23 @@
   }
 }
 
-
-input{
+input {
   color: #333;
-	margin: 0 auto;
+  margin: 0 auto;
   padding: 1rem 1.5rem;
   border-radius: 0.2rem;
   background-color: rgb(255, 255, 255);
   border: none;
-  border:none;
+  border: none;
 }
 
-.txt--center{
+.txt--center {
   text-align: center;
 }
-:host-context(.light-card) mat-card{
+:host-context(.light-card) mat-card {
   background: #fff;
 }
 
-mat-card{
-  background : #333;
+mat-card {
+  background: #333;
 }
-
-

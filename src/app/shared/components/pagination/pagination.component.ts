@@ -11,23 +11,52 @@ export class PaginationComponent implements OnInit {
 
   @Input() pagination !: Pagination
   arrays : number[] = []
-  @Output() onChangePage = new EventEmitter<any>()
+  disablePagination  = {
+    disablePrev : false,
+    disableNext: false
+  }
+  totalPage:number = 0
+  @Output() onChangePage = new EventEmitter<number>()
 
   constructor() { }
 
   ngOnInit(): void {
 
     if(!this.pagination) throw Error('pagination is required')
-    this.arrays = Array(this.pagination.totalPage).fill(0).map((x,i)=>i);
+    this.totalPage = Math.ceil(this.pagination.totalRecords/ this.pagination.pageSize)
+    this.arrays = Array(this.totalPage).fill(0).map((x,i)=>i);
   }
   onchangePage(page:number){
    
     this.onChangePage.emit(page)
+    this.setDisable(page)
     this.pagination = {
       ...this.pagination,
       page : +page
     }
+
+    
+
   
+  }
+
+  setDisable(page:number){
+    if(!page) return
+    if(page === 1){
+      this.disablePagination = {
+        disablePrev : true,
+        disableNext: false
+      }
+      return;
+    }
+
+    if(page === this.totalPage){
+      this.disablePagination = {
+        disablePrev : false,
+        disableNext: true
+      }
+      return;
+    }
   }
 
 }

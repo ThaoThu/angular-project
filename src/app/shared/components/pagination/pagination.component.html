@@ -1,13 +1,12 @@
 <div *ngIf="pagination" class="wrapper">
-    <ul class="pagination">
-
-
-        <li><a href="#">«</a></li>
-
-     
-        <li *ngFor="let item of arrays ; index as idx" (click)="onchangePage(idx+1)"><a [ngClass]="{'active': idx+1=== pagination.page}">{{idx+1}}</a></li>
-     
-        <li><a href="#">»</a></li>
-    </ul>
-
+  <ul class="pagination">
+    <!-- <li (click)="onChangePage(1)"><a [ngClass]="{'disable':   disablePagination.disablePrev}">«</a></li> -->
+    <li
+      *ngFor="let item of arrays; index as idx"
+      (click)="onchangePage(idx + 1)"
+    >
+      <a [ngClass]="{ active: idx + 1 === pagination.page }">{{ idx + 1 }}</a>
+    </li>
+    <!-- <li (click)="onChangePage(1)"><a [ngClass]="{'disable':   disablePagination.disableNext}">»</a></li> -->
+  </ul>
 </div>

@@ -1,19 +1,27 @@
-<app-banner txt1='100% Healthy & Affordable'  txt3='Small Changes Big Difference' cclass="full-banner">
-    <h1>
-      Organic <br/>
-    Vegetables 
-    </h1>
-
+<app-banner
+  txt1="100% Healthy & Affordable"
+  txt3="Small Changes Big Difference"
+  cclass="full-banner"
+>
+  <h1>
+    Organic <br />
+    Vegetables
+  </h1>
 </app-banner>
 <app-small-banner></app-small-banner>
+<!-- <div class="login-wrapper">
+  <button (click)="productListCom.login()">Login</button>
+  <button (click)="productListCom.logout()">Logout</button>
+</div> -->
+<app-product-list #productListCom></app-product-list>
 
-<app-product-list></app-product-list>
-
-<app-banner txt1='SPECIAL DISCOUNT'  txt3='Take now 20% off for all grocer product.' cclass="small-banner">
-    <h1>
-      For all <br/>
-      Grocery  
-      products 
-    </h1>
-    
-    </app-banner>
+<app-banner
+  txt1="SPECIAL DISCOUNT"
+  txt3="Take now 20% off for all grocer product."
+  cclass="small-banner"
+>
+  <h1>
+    For all <br />
+    Grocery products
+  </h1>
+</app-banner>

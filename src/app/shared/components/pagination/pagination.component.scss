@@ -6,22 +6,33 @@ ul.pagination {
     display: inline-block;
     padding: 0;
     margin: 0;
+
+li {
+    display: inline;
+    a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+    }
 }
 
-ul.pagination li {display: inline;}
 
-ul.pagination li a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    border-radius: 5px;
-}
 
-ul.pagination li a.active {
+
+
+a.active {
     background-color: #4CAF50;
     color: white;
-    border-radius: 5px;
+    
+}
+a.disable{
+    cursor: not-allowed;
+    background-color: #eee;
 }
 
-ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+li a:hover:not(.active) {background-color: #ddd;}

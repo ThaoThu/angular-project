@@ -13,8 +13,9 @@ export class ProductListComponent implements OnInit {
   productList: IProduct[] = [];
   pagination = {
     page: 1,
-    totalPage : 2,
+    totalRecords : 25,
     pageSize : 4
+  
   }
 
   isLogin = false;
@@ -39,7 +40,7 @@ export class ProductListComponent implements OnInit {
     this.auth.isAuth = false;
     this.isLogin = false;
   }
-  changePage(page:any){
+  changePage(page:number){
     console.log('page', page);
     this.productService.getProductList().subscribe(ps => this.productList = ps.reverse());
   
