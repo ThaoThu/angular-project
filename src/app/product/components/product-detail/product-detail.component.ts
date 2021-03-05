@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ConnectService } from 'src/app/connect.service';
 import { IProduct } from 'src/app/product';
 import { ProductService } from 'src/app/product.service';
 
@@ -11,14 +12,16 @@ import { ProductService } from 'src/app/product.service';
 export class ProductDetailComponent implements OnInit {
   product!: IProduct;
   isLogin = false;
+  b= ''
   constructor(private productService: ProductService,
     // tslint:disable-next-line:align
     private activatedRoute: ActivatedRoute,
+    private connect: ConnectService,
     private router: Router) { }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-
+this.b=this.connect.a 
     this.activatedRoute.paramMap.subscribe(params => {
       console.log(params);
       const id = params.get('id');

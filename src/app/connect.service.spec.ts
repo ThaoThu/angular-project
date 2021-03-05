@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { QaService } from './qa.service';
+import { ConnectService } from './connect.service';
 
-describe('QaService', () => {
-  let service: QaService;
+describe('ConnectService', () => {
+  let service: ConnectService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(QaService);
+    service = TestBed.inject(ConnectService);
   });
 
   it('should be created', () => {

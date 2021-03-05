@@ -5,8 +5,11 @@
       <b>{{ isDarkTheme ? "Dark" : "Light" }}</b></mat-slide-toggle
     >
   </div>
+  {{
+   a1
+  }}
   <div class="content txt--center">
-    <input [(ngModel)]="filter" placeholder="search by name" />
+    <input [(ngModel)]="filter" placeholder="search by name" #searchInput />
     <div class="grid">
       <app-card
         class="card"

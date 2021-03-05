@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ConnectService } from './connect.service';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -24,7 +25,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-
+    
 
   ],
   imports: [
@@ -40,7 +41,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatButtonModule,
     MatIconModule,
   ],
-  providers: [],
+  providers: [], //ConnectService
   bootstrap: [AppComponent, AppRoutingModule],
 
 })

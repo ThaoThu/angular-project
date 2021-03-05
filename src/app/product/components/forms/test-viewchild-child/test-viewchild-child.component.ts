@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-test-viewchild-child',
@@ -11,11 +11,11 @@ export class TestViewchildChildComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  items : string[] = []
   toggle(params:string){
-  console.log("🚀 ~ file: test-viewchild-child.component.ts ~ line 16 ~ TestViewchildChildComponent ~ toggle ~ params", params)
-    
-    alert('Hello, I am child'+params)
+    alert('hello '+ params)
   }
+
+
 
 }

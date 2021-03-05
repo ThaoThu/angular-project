@@ -1,13 +1,16 @@
-<!-- <form #namForm="ngForm">
+<form #nameForm="ngForm">
     <input type="text"
     [(ngModel)]="model.name"
     #name="ngModel"
     
     >
     <button>Submit</button> 
-</form> -->
+</form>
 <button (click)="toggleInParent()">Toggle</button>
 
-<app-test-viewchild-child #child>
+<app-test-viewchild-child #child (newEvent)="addItem($event)" >
+
+</app-test-viewchild-child>
+<app-test-viewchild-child #child (newEvent)="addItem($event)" >
 
 </app-test-viewchild-child>
