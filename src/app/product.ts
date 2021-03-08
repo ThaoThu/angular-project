@@ -1,8 +1,25 @@
 export interface IProduct {
-  id: string;
-  name: string;
-  price: number;
-  imageUrl: string;
-  description: string;
-  categories: string[];
+  status : {
+    code : number
+  },
+ data : {
+   contents : ProductItem[],
+   paging : {
+     page: number,
+     pageSize : number,
+     totalRecords:number
+   }
+ }
+ 
 }
+
+
+export interface ProductItem{
+  
+    id: string;
+    name: string;
+    inStock :boolean;
+    price: number;
+    imageUrl: string;
+    description: string;
+   }

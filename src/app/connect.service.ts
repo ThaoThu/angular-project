@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,12 +6,12 @@ import { Injectable } from '@angular/core';
 })
 
 export class ConnectService {
-  a= 'aaa'
+ 
 
-
-  constructor() { }
-
-  showDate = () =>{
-    return new Date()
+  constructor(private http: HttpClient) { }
+  getConfig(){
+    //return this.http.get(this.apiUrl)
   }
+
+
 }

@@ -23,9 +23,10 @@ import { ProductCommentComponent } from './components/product-comment/product-co
 import { SharedModule } from '../shared/shared.module';
 import { TestViewchildComponent } from './components/forms/test-viewchild/test-viewchild.component';
 import { TestViewchildChildComponent } from './components/forms/test-viewchild-child/test-viewchild-child.component';
+import { ProductStatusComponent } from './components/product-status/product-status.component';
 // import { SharedModule } from '../shared/shared.module';
 @NgModule({
-  declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe, BannerComponent, SmallBannerComponent, SmallBannerItemComponent, CardComponent, ProductPageComponent, ProductCommentComponent, TestViewchildComponent, TestViewchildChildComponent],
+  declarations: [ProductDetailComponent, ProductListComponent, TooltipDirective, ProductComponent, ShortenTextPipe, FilterQueryPipe, BannerComponent, SmallBannerComponent, SmallBannerItemComponent, CardComponent, ProductPageComponent, ProductCommentComponent, TestViewchildComponent, TestViewchildChildComponent,ProductStatusComponent],
   imports: [
     RouterModule,
     ProductRoutingModule,

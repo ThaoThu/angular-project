@@ -4,10 +4,7 @@
       >Card Background :
       <b>{{ isDarkTheme ? "Dark" : "Light" }}</b></mat-slide-toggle
     >
-  </div>
-  {{
-   a1
-  }}
+  </div>          
   <div class="content txt--center">
     <input [(ngModel)]="filter" placeholder="search by name" #searchInput />
     <div class="grid">
@@ -24,9 +21,10 @@
           <div class="card-img-wrapper">
             <img [src]="product.imageUrl" alt="img" />
           </div>
-
+          <app-product-status [status] = "product.inStock"></app-product-status>
           <div class="card-title">{{ product.name }}</div>
           <p>{{ product.price | currency: "VND" }}</p>
+         
 
           {{ product.description | shortenText: 30 }}
         </div>

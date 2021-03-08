@@ -2,7 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 import { ConnectService } from 'src/app/connect.service';
-import { IProduct } from 'src/app/product';
+import { ProductItem } from 'src/app/product';
 import { ProductService } from 'src/app/product.service';
 
 @Component({
@@ -12,13 +12,13 @@ import { ProductService } from 'src/app/product.service';
 })
 export class ProductListComponent implements OnInit {
   @ViewChild('searchInput') input !: ElementRef
-  productList: IProduct[] = [];
+  productList : ProductItem[] = [];
   pagination = {
-    page: 1,
-    totalRecords : 25,
-    pageSize : 4
-  
+    page : 1,
+    pageSize:1,
+    totalRecords:1
   }
+
 
   isLogin = false;
   filter = ''
@@ -31,17 +31,21 @@ export class ProductListComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.productService.getProductList().subscribe(ps => this.productList = ps);
-    console.log('sss',this.connectServive.showDate());
-    //this.connectServive.a='ffff'
-    this.a1 = this.connectServive.a
+    this.productService.getProductList().subscribe(ps => {
+      console.log("ps", ps)
+      this.productList = ps.data.contents
+      this.pagination = ps.data.paging
+    });
+
+
+
     
   }
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
     this.input?.nativeElement?.focus()
-    console.log("🚀 ~ file: product-list.component.ts ~ line 37 ~ ProductListComponent ~ ngAfterViewInit ~ this.input", this.input)
+ 
   }
   movePage(item: any): void {
     this.router.navigate(['/product', item]);
@@ -56,7 +60,7 @@ export class ProductListComponent implements OnInit {
   }
   changePage(page:number){
     console.log('page', page);
-    this.productService.getProductList().subscribe(ps => this.productList = ps.reverse());
+ 
   
   }
   handleChange(e: any){
