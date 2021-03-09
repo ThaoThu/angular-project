@@ -14,16 +14,16 @@ import { IProduct, ProductItem } from './product';
 export class ProductService {
   productList :ProductItem[] = [];
 
-  private apiUrl = 'https://5ca6d9ac3a082600142799f4.mockapi.io/api/product1'
+
 
   constructor(private http : HttpClient) {                 
-    this.getProductList().subscribe(ps =>{ 
-      this.productList = ps.data.contents;
-    })
+    // this.getProductList().subscribe(ps =>{ 
+    //   this.productList = ps.data.contents;
+    // })
    }
-  getProductList(): Observable<IProduct> {
+  getProductList(api : string): Observable<IProduct> {
 
-  return this.http.get<IProduct>(this.apiUrl)
+  return this.http.get<IProduct>(api)
  
   }
 

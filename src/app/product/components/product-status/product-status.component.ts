@@ -10,9 +10,16 @@ export class ProductStatusComponent implements OnInit {
   statusString : string = '';
   
   constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("🚀 ~ file: product-status.component.ts ~ line 14 ~ ProductStatusComponent ~ ngOnChanges ~ changes", changes)
+    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
+    //Add '${implements OnChanges}' to the class.
+    
+  }
+
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+  console.log("🚀 ~ file: product-status.component.ts ~ line 21 ~ ProductStatusComponent ~ ngOnInit ~ ngOnInit")
+ 
     this.statusString = this.status ? 'Con hang' : 'Het hang'
     // console.log('this.status',this.status);
     
@@ -20,24 +27,17 @@ export class ProductStatusComponent implements OnInit {
     // console.log('this.status',this.status);
 
   }
+
   ngDoCheck(): void {
-    console.log('do check');
-    
-    //Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.
-    //Add 'implements DoCheck' to the class.
-    
+
   }
   ngAfterContentChecked(): void {
-    //Called after every check of the component's or directive's content.
-    //Add 'implements AfterContentChecked' to the class.
-    console.log('after content check');
+
     
   }
 
   ngAfterViewChecked(): void {
-    //Called after every check of the component's view. Applies to components only.
-    //Add 'implements AfterViewChecked' to the class.
-    console.log('after view check');
+ 
     
   }
 

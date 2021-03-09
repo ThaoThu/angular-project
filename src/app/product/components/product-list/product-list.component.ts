@@ -18,6 +18,7 @@ export class ProductListComponent implements OnInit {
     pageSize:1,
     totalRecords:1
   }
+  apiUrl = 'https://5ca6d9ac3a082600142799f4.mockapi.io/api/product'
 
 
   isLogin = false;
@@ -31,15 +32,14 @@ export class ProductListComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.productService.getProductList().subscribe(ps => {
-      console.log("ps", ps)
+    this.getData(this.apiUrl+this.pagination.page)
+  }
+
+  getData(api:string){
+    this.productService.getProductList(api).subscribe(ps => {
       this.productList = ps.data.contents
       this.pagination = ps.data.paging
     });
-
-
-
-    
   }
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
@@ -60,6 +60,7 @@ export class ProductListComponent implements OnInit {
   }
   changePage(page:number){
     console.log('page', page);
+    this.getData(this.apiUrl+page)
  
   
   }
