@@ -18,24 +18,24 @@ export class ProductListComponent implements OnInit {
     pageSize:1,
     totalRecords:1
   }
-  apiUrl = 'https://5ca6d9ac3a082600142799f4.mockapi.io/api/product'
+ 
 
 
   isLogin = false;
   filter = ''
   isDarkTheme = true
-  a1=''
+
   constructor(
     private productService: ProductService,
     private router: Router, public auth: AuthService,
-    private connectServive : ConnectService
+ 
     ) { }
 
   ngOnInit(): void {
-    this.getData(this.apiUrl+this.pagination.page)
+    this.getData(this.pagination.page)
   }
 
-  getData(api:string){
+  getData(api:number){
     this.productService.getProductList(api).subscribe(ps => {
       this.productList = ps.data.contents
       this.pagination = ps.data.paging
@@ -60,7 +60,7 @@ export class ProductListComponent implements OnInit {
   }
   changePage(page:number){
     console.log('page', page);
-    this.getData(this.apiUrl+page)
+    this.getData(page)
  
   
   }

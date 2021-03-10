@@ -1,4 +1,59 @@
 <div class="wrapper">
 <h2>Reviews</h2>
-<h3>Add your review</h3>
+
+<ul>
+    <li *ngFor="let comment of comments" class="comment__list">
+        <div class="comment__wrapper d-flex">
+
+            <div class="comment__img">
+                <img src="https://i.ibb.co/pf0cL2m/149397879-2811169219211848-5440848973409290538-n.jpg" alt="img">
+            </div>
+            <div>
+                <div class="comment__content-name">{{comment.name}}</div>
+               <div>
+
+                   <mat-icon *ngFor="let item of productService.numberSequence(comment.point)" >grade</mat-icon>
+             
+               </div>
+                <div class="">
+                   {{comment.review}} 
+                </div>
+            </div>
+        </div>    
+        
+        </li>
+</ul>
+<div class="flex flex-between">
+    <h3>Add your review </h3>
+    <p>Your email address will not be published. Required fields are marked *</p>
+</div>
+<form
+#commentForm = "ngForm"
+    autocomplete = "off"
+    (ngSubmit) = "addComment()"
+    >
+
+    <div class="form-group">
+        <div>
+            <label for="name">Your Name</label>
+            <input name="name" #name="ngModel" [(ngModel)]="comment.name" type="text" required  class="form-control">
+            <div [hidden]="name.valid || name.pristine" class="error">Required</div>
+
+        </div>
+        <div>
+            <label for="mail">Your Email</label>
+            <input  name="mail" #mail="ngModel"  [(ngModel)]="comment.mail" type="text" required class="form-control">
+            <div [hidden]="mail.valid || mail.pristine" class="error">Required</div>
+        </div>
+    </div>
+        <label for="star">Star</label>
+        <input  name="star" [(ngModel)]="comment.point" type="number" class="form-control" min="1" max = "5">
+        <label for="review">Your review</label>
+        <textarea col='5' #review="ngModel"  name="review" [(ngModel)]="comment.review" required type="text" class="form-control" ></textarea>
+        <div [hidden]="review.valid || review.pristine" class="error">Required</div>
+        <button type="submit"   [disabled]= "commentForm.form.invalid" >Save</button>  
+     
+      
+    </form>
+
 </div>

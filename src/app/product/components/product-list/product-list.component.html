@@ -21,6 +21,7 @@
           <div class="card-img-wrapper">
             <img [src]="product.imageUrl" alt="img" />
           </div>
+          <button (click)="product.inStock = !product.inStock">{{ product.inStock ? 'Mua hang' : 'Nhap hang'}}</button>
           <app-product-status [status] = "product.inStock"></app-product-status>
           <div class="card-title">{{ product.name }}</div>
           <p>{{ product.price | currency: "VND" }}</p>
