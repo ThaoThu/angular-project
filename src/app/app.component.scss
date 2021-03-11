@@ -15,20 +15,27 @@ overflow-x: hidden;
 .nav-right {
   margin-left: auto;
   list-style: none;
+  align-items: center;
   display: flex;
   li {
     margin-right: 10px;
   }
   a {
     font-size: 14px;
-    color: #fff;
+    color: #323232;
     text-decoration: none;
-    font-weight: 300;
+
+    text-transform: uppercase;
+    font-weight: 600;
   }
   .link--active {
-    font-weight: 500;
+
     color: greenyellow;
   }
 }
 
+.mat-toolbar{
+  background-color: #fff;
+  padding : 20px  0px;
+}
 

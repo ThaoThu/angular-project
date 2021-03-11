@@ -38,14 +38,22 @@ export class ProductListComponent implements OnInit {
   getData(api:number){
     this.productService.getProductList(api).subscribe(ps => {
       this.productList = ps.data.contents
+      this.productService.productList = ps.data.contents
       this.pagination = ps.data.paging
     });
   }
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
-    this.input?.nativeElement?.focus()
+    this.focus()
  
+  }
+
+  focus(){
+    if(this.router.url === '/product'){
+
+      this.input?.nativeElement?.focus()
+    }
   }
   movePage(item: any): void {
     this.router.navigate(['/product', item]);
@@ -66,7 +74,7 @@ export class ProductListComponent implements OnInit {
   }
   handleChange(e: any){
     this.filter = e.target.value
-    console.log('this.filter', this.filter);
+   
     
   }
   hangleChangeSwitch (){

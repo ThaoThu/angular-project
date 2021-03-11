@@ -21,12 +21,16 @@ export class ProductDetailComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
-
+ 
+    console.log('init');
+    
     this.activatedRoute.paramMap.subscribe(params => {
-      console.log(params);
       const id = params.get('id');
-     this.productService.findProductById(id);
+      this.product = this.productService.findProductById(id);
     });
+
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   back() {

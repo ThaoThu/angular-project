@@ -1,0 +1,31 @@
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    padding : 50px 0;
+}
+h1{
+    font-size: 36px;
+    line-height: 36px;
+    color: #222;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+input{
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    padding: 10px 20px;
+    width: 100%;
+    outline: 0;
+    font-size: 14px;
+}
+label{
+    display : inline-block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+}
+button{
+    margin-top: 50px;
+}

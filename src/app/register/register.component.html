@@ -1,0 +1,31 @@
+
+     <div class="wrapper">
+         <h1>Register</h1>
+         <form [formGroup] = "registerForm" (ngSubmit)="onSubmit()">
+             <div>
+                 <label for="">Username *</label>
+                 <input type="text" formControlName = "username">
+                 <div *ngIf="registerForm.controls.username?.hasError('required')">Required</div>
+{{
+    registerForm.controls.username.hasError('required')
+}}
+             </div>
+             <div>
+                 
+                              <label for="">Email address *</label>
+                              <input type="text" formControlName = "email">
+
+             </div>
+             <div>
+
+                 <label for="">Password *</label>
+                 <input type="text" formControlName = "password">
+             </div>
+             <div>
+
+                 <label for="">Password confirmation*</label>
+                 <input type="text" formControlName = "passwordConfirmation">
+             </div>
+             <button type="submit"   [disabled]= "registerForm.invalid" >Register</button>  
+         </form>
+     </div>

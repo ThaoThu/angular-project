@@ -36,18 +36,23 @@
     <div class="form-group">
         <div>
             <label for="name">Your Name</label>
-            <input name="name" #name="ngModel" [(ngModel)]="comment.name" type="text" required  class="form-control">
+            <input name="name" #name="ngModel" [(ngModel)]="comment.name" type="text" required  class="form-control" >
             <div [hidden]="name.valid || name.pristine" class="error">Required</div>
 
         </div>
         <div>
             <label for="mail">Your Email</label>
-            <input  name="mail" #mail="ngModel"  [(ngModel)]="comment.mail" type="text" required class="form-control">
-            <div [hidden]="mail.valid || mail.pristine" class="error">Required</div>
+            <input  name="mail" #mail="ngModel"  [(ngModel)]="comment.mail" type="text" required email class="form-control">
+            <div [hidden]="mail.valid || mail.pristine" class="error">Email must be a valid email address </div>
+        
+
         </div>
     </div>
         <label for="star">Star</label>
-        <input  name="star" [(ngModel)]="comment.point" type="number" class="form-control" min="1" max = "5">
+        <input appRangeValidator [range]=[1,5]  name="star"  #point="ngModel" [(ngModel)]="comment.point" type="number" class="form-control" min="1" max = "5">
+        <div [hidden]="!point.errors?.invalid" class="error">Required </div>
+        <div [hidden]="!point.errors?.range" class="error"> Star is from 1 to 5 points </div>
+
         <label for="review">Your review</label>
         <textarea col='5' #review="ngModel"  name="review" [(ngModel)]="comment.review" required type="text" class="form-control" ></textarea>
         <div [hidden]="review.valid || review.pristine" class="error">Required</div>

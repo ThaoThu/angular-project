@@ -1,9 +1,9 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <mat-toolbar-row>
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
     </button>
-    <h1><img src="./assets/imgs/logo.png" alt="" class="logo" /> Learning</h1>
+    <h1><img src="./assets/imgs/logo1.png" alt="" class="logo" /></h1>
     <span class="menu-spacer"></span>
     <ul class="nav-right">
       <li *ngFor="let item of items">
@@ -16,6 +16,7 @@
           >{{ item.name }}</a
         >
       </li>
+      <!-- <button (click)="openRegisterForm()"> Register</button> -->
     </ul>
   </mat-toolbar-row>
 </mat-toolbar>
@@ -33,3 +34,5 @@
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+

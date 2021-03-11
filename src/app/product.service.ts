@@ -25,9 +25,15 @@ constructor(private http: HttpClient) {}
  
   }
 
-  findProductById(id: any): ProductItem{
+  findProductById(id: any): any{
+    let product = this.productList.find(p => p.id == (id));
+    console.log("🚀 ~ file: product.service.ts ~ line 30 ~ ProductService ~ findProductById ~ product", product, id, this.productList)
+    if (product) {
+     return product
+    } else {
+      return throwError(new Error('404 Not Found'));
+    }
 
-    return this.productList.filter(p => p.id = id)[0];
   }
   addComment(comment : Comment): Observable<Comment>{
 
